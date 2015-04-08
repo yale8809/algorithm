@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reverse_Words", "Reverse_Words\Reverse_Words.vcxproj", "{7E45D421-7F77-4899-B773-775CD59B7663}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyString", "MyString\MyString.vcxproj", "{8B4AB2C0-A479-42D1-9C65-F02DF10AF098}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E45D421-7F77-4899-B773-775CD59B7663}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E45D421-7F77-4899-B773-775CD59B7663}.Debug|Win32.Build.0 = Debug|Win32
+		{7E45D421-7F77-4899-B773-775CD59B7663}.Release|Win32.ActiveCfg = Release|Win32
+		{7E45D421-7F77-4899-B773-775CD59B7663}.Release|Win32.Build.0 = Release|Win32
+		{8B4AB2C0-A479-42D1-9C65-F02DF10AF098}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B4AB2C0-A479-42D1-9C65-F02DF10AF098}.Debug|Win32.Build.0 = Debug|Win32
+		{8B4AB2C0-A479-42D1-9C65-F02DF10AF098}.Release|Win32.ActiveCfg = Release|Win32
+		{8B4AB2C0-A479-42D1-9C65-F02DF10AF098}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
