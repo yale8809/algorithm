@@ -20,7 +20,7 @@ public:
     MyString substr(int pos = 0,int n = 0) const;
     MyString &insert(int p0, const char *s);
     MyString &erase(int pos = 0, int n = 0);
-    MyString &operator+=(const MyString &s);
+    MyString& operator+(const MyString &s);
     MyString &append(const char *s);
 private:
 	char *m_data;                // ÓÃÓÚ±£´æ×Ö·û´®
