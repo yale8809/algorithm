@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartPointer", "SmartPointe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polymorphism", "Polymorphism\Polymorphism.vcxproj", "{399DE8A7-312B-4EC1-9B39-88691A312E29}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "basic_knowledge", "basic_knowledge\basic_knowledge.vcxproj", "{7D562E43-4060-4B05-90D8-40345CB8627F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -37,6 +39,10 @@ Global
 		{399DE8A7-312B-4EC1-9B39-88691A312E29}.Debug|Win32.Build.0 = Debug|Win32
 		{399DE8A7-312B-4EC1-9B39-88691A312E29}.Release|Win32.ActiveCfg = Release|Win32
 		{399DE8A7-312B-4EC1-9B39-88691A312E29}.Release|Win32.Build.0 = Release|Win32
+		{7D562E43-4060-4B05-90D8-40345CB8627F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7D562E43-4060-4B05-90D8-40345CB8627F}.Debug|Win32.Build.0 = Debug|Win32
+		{7D562E43-4060-4B05-90D8-40345CB8627F}.Release|Win32.ActiveCfg = Release|Win32
+		{7D562E43-4060-4B05-90D8-40345CB8627F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,17 +19,20 @@ struct Base
 {
     virtual ~ Base(){};
     virtual void f(){ cout<<"Base"<<endl;};
+    virtual void f1() const{ cout<<"Base const"<<endl;};
 };
 
 struct Derived: public Base
 {
     virtual void f(){cout<<"Derived"<<endl;}
+    virtual void f1() const{ cout<<"derived const"<<endl;};
 };
 
 void fun1()
 {
     Derived derived;
     Base & base = derived;
+    base.f1();
     try
     {
         throw base;
@@ -121,6 +124,7 @@ class Father1
 {
 public:
     Father1(){cout<<"Father1 ctor"<<endl;};
+    Father1(Father1& f){cout<<"Father1 copy ctor"<<endl;};
     virtual ~Father1(){cout<<"Father1 dtor"<<endl;};
 
 };
@@ -130,9 +134,45 @@ class Son1: public Father1
     Father1 f;
 public:
     Son1(){cout<<"Son1 ctor"<<endl;};
+    Son1(Son1& s){cout<<"Son1 copy ctor"<<endl;};
     virtual ~Son1(){cout<<"Son1 dtor"<<endl;};
 
 };
+
+
+void foo(Father1 f)
+{
+    cout<<"foo"<<endl;
+}
+void bar(Father1& f)
+{
+    cout<<"bar"<<endl;
+}
+
+class Father2
+{
+    int i;
+public:
+    Father2(){cout<<"Father2 ctor"<<endl;};
+    Father2(int x): i(x){cout<<"Father2 ctor with param"<<endl;};
+    Father2(const Father2& f){cout<<"Father2 copy ctor"<<endl;};
+    Father2& operator =(const Father2& f){cout<<"Father2 ="<<endl; return *this;};
+//private:
+    virtual ~Father2(){cout<<"Father2 dtor"<<endl;};
+
+};
+
+void functf2()
+{
+    int i = 1;
+    char c = 10;
+    Father2 f1;
+    Father2 f2(i);
+    Father2 f3(c);
+    Father2 f4(f2);
+    Father2 f5 = f2;
+    f1 = f4;
+}
 
 class Con
 {
@@ -156,6 +196,16 @@ public:
 
 int New::x = 0;
 
+
+class base
+{};
+class pubson: public base
+{};
+class proson: protected base
+{};
+class privson: private base
+{};
+
 int _tmain(int argc, _TCHAR* argv[])
 {
     fun1();
@@ -174,20 +224,29 @@ int _tmain(int argc, _TCHAR* argv[])
     delete f;
 
     Son1 s1;
-    Father1& f2 = s1;
-    cout<<"-------------"<<endl;
-    Father1* f1 = new Son1();
-    delete f1;
-    cout<<"-------------"<<endl;
+    //Father1& f2 = s1;
+    foo(s1);
+    bar(s1);
+    //cout<<"-------------"<<endl;
+    //Father1* f1 = new Son1();
+    //delete f1;
+    //cout<<"-------------"<<endl;
 
 
-    A a1;
-    const A a2;
-    a1.print();
-    a2.print();
+    //A a1;
+    //const A a2;
+    //a1.print();
+    //a2.print();
 
-    New* n = new New();
-    delete n;
-	return 0;
+    //New* n = new New();
+    //delete n;
+    functf2();
+
+    //base *bb = new proson();
+    //base *bb = new privson();
+
+ 	return 0;
+
+
 }
 
